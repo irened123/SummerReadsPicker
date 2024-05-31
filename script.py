@@ -1,5 +1,7 @@
 from data import *
 from intro import *
+from outro import *
+from wish import * 
 
 print_intro()
 
@@ -30,6 +32,23 @@ while (not end_program):
                 print(f"Author: {book_recommendations[selected_genre][item]["author"]}")
                 print(f"Ratings: {book_recommendations[selected_genre][item]["rating"]}")
                 print(f"Keywords: {book_recommendations[selected_genre][item]["keywords"]}")
+            exit_genre = False
+            while (not exit_genre):
+                next_action = str(input("\nType 1, 2, or 3 to add the first, second, or third book listed to your wishlist. Type 'n' if you don't want to add anything.\n"))
+                if (next_action == 'n'):
+                    exit_genre = True
+                else:
+                    add_to_wish_list(selected_genre, diff_books[int(next_action) - 1])
+        further_explore = str(input("\nWould you like to explore another genre? Enter 'y' for yes, 'n' to exit the program, and 'w' to view your wishlist.\n"))
+        
+        if (further_explore == 'n'):
+            end_program = True
+        if (further_explore == 'w'):
+            end_program = view_wish_list()
+
+print_outro()
+    
+            
                 
             
                 

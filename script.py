@@ -12,7 +12,7 @@ end_program = False
 while (not end_program):
     user_input = str(input("\nWhich genre are you interested in reading?\nTo see if it's here, type the beginning of this genre and press enter.\n"))
     
-    # Search for genres that begin the same as the user input.
+    # Search for genres that begin the same as the user input
     matching_genres = []
     for item in genres:
         if (item.startswith(user_input)):
@@ -33,12 +33,14 @@ while (not end_program):
                 print(f"Ratings: {book_recommendations[selected_genre][item]["rating"]}")
                 print(f"Keywords: {book_recommendations[selected_genre][item]["keywords"]}")
             exit_genre = False
+            # Allow user to add books to the wishlist 
             while (not exit_genre):
                 next_action = str(input("\nType 1, 2, or 3 to add the first, second, or third book listed to your wishlist. Type 'n' if you don't want to add anything.\n"))
                 if (next_action == 'n'):
                     exit_genre = True
                 else:
                     add_to_wish_list(selected_genre, diff_books[int(next_action) - 1])
+        # Ask user whether they want to exit, explore another genre, or view the wishlist 
         further_explore = str(input("\nWould you like to explore another genre? Enter 'y' for yes, 'n' to exit the program, and 'w' to view your wishlist.\n"))
         
         if (further_explore == 'n'):

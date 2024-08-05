@@ -55,5 +55,7 @@ No additional installations or dependencies are required. Once you run the `scri
 
 This project was inspired by the Codecademy [python-data-structures-and-algorithms](https://github.com/Codecademy/python-data-structures-and-algorithms) repository. While some of the user input structures and formatting ideas were adapted, all code in this repository has been written independently to avoid direct duplication. 
 
+In addition, information and recommendations for summer reading were sourced from the Boston Public Library website in May 2024. For more details, please visit: [Boston Public Library](https://www.bpl.org/).
+
 
 
